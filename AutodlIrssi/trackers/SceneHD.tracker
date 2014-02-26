@@ -37,10 +37,10 @@
 
 	<servers>
 		<server
-			network="P2P-NET"
-			serverNames="irc.p2p-network.net,irc.p2p-irc.net"
-			channelNames="#scenehd,#scenehd.announce"
-			announcerNames="fireBot"
+			network="SceneHD"
+			serverNames="irc.scenehd.eu"
+			channelNames="#announce"
+			announcerNames="ratatat"
 			/>
 	</servers>
 
@@ -48,13 +48,12 @@
 		<linepatterns>
 			<extract>
 				<!--[NEW] 24.S08E20.EXTENDED.720p.BluRay.X264-WASABi [TV/720] https://scenehd.org/details.php?id=37403 by: anonymous-->
-				<regex value="^\[NEW](.*)\[([^\]]+)] https?\:\/\/([^\/]+\/).*[&amp;\?]id=(\d+) by:(.*)"/>
+				<regex value="^\[NEW](.*)\[([^\]]+)] https?\:\/\/([^\/]+\/).*[&amp;\?]id=(\d+)
 				<vars>
 					<var name="torrentName"/>
 					<var name="category"/>
 					<var name="$baseUrl"/>
 					<var name="$torrentId"/>
-					<var name="uploader"/>
 				</vars>
 			</extract>
 		</linepatterns>
